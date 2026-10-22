@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DRAXHTAR · Portfolio</title>
+  <meta name="description" content="DRAXHTAR — developer portfolio. A retro, pixel-art, medieval quest.">
+  <meta name="theme-color" content="#0d0820">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+  <!-- ============ CASTLE GATE / PRESS START ============ -->
+  <div id="gate" role="dialog" aria-label="Start screen">
+    <div class="gate-door left"><span class="ring"></span></div>
+    <div class="gate-door right"><span class="ring"></span></div>
+    <div class="gate-ui">
+      <div class="gate-torches">
+        <canvas class="torch" width="10" height="22"></canvas>
+        <canvas id="gate-crest" class="crest"></canvas>
+        <canvas class="torch" width="10" height="22"></canvas>
+      </div>
+      <h1 class="gate-title">DRAXHTAR</h1>
+      <p class="gate-sub">~ A PORTFOLIO IN EIGHT BITS ~</p>
+      <button class="gate-start blink" type="button">PRESS START</button>
+      <p class="gate-hint">click · tap · any key</p>
+    </div>
+  </div>
+
+  <!-- ============ OVERLAYS ============ -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="crt" aria-hidden="true"></div>
+  <div id="flash" aria-hidden="true"></div>
+  <div id="levelup" aria-hidden="true"><span>LEVEL UP!</span><small></small></div>
+  <div id="toasts" aria-live="polite"></div>
+
+  <!-- ============ HUD ============ -->
+  <header id="hud">
+    <div class="hud-xp">
+      <span class="hud-lv">LV <b id="lv">1</b></span>
+      <div class="xp-bar"><div class="xp-fill" id="xp"></div></div>
+    </div>
+    <nav class="hud-nav" aria-label="Sections">
+      <a href="#tale">TALE</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#quests">QUESTS</a>
+      <a href="#raven">RAVEN</a>
+    </nav>
+    <div class="hud-btns">
+      <button id="btn-trophy" class="hud-btn" type="button" title="Achievements">★ <b id="trophy-count">0</b></button>
+      <button id="btn-sfx" class="hud-btn on" type="button" title="Sound effects">SFX</button>
+      <button id="btn-bgm" class="hud-btn" type="button" title="Music">BGM</button>
+      <button id="btn-crt" class="hud-btn on" type="button" title="CRT effect">CRT</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="hero">
+      <canvas id="scene" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="hero-pre">— THE LEGEND OF —</p>
+        <h2 class="hero-title" aria-label="DRAXHTAR">DRAXHTAR</h2>
+        <p class="hero-role"><span class="prompt">&gt;</span> <span id="role"></span><span class="caret"></span></p>
+        <div class="hero-actions">
+          <a class="px-btn gold" href="#tale">▶ BEGIN QUEST</a>
+          <a class="px-btn" href="#quests">⚔ QUEST LOG</a>
+        </div>
+      </div>
+      <p class="hero-hint">click the sky to summon lightning</p>
+      <a class="scroll-hint" href="#tale" aria-label="Scroll down">▼</a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="tale" class="section stone">
+      <div class="wrap">
+        <h2 class="sec-title"><canvas class="torch" width="10" height="22"></canvas><span class="split">THE HERO'S TALE</span><canvas class="torch" width="10" height="22"></canvas></h2>
+
+        <div class="tale-grid">
+          <aside class="char-card px-frame" data-reveal="zoom">
+            <div class="char-portrait"><canvas id="avatar"></canvas></div>
+            <h3 class="char-name">DRAXHTAR</h3>
+            <p class="char-class">Code Paladin · LV 27</p>
+            <div class="bar-row"><span>HP</span><div class="bar hp"><i style="--v:100%"></i></div><em>100</em></div>
+            <div class="bar-row"><span>MP</span><div class="bar mp"><i style="--v:82%"></i></div><em>82</em></div>
+            <div class="bar-row"><span>XP</span><div class="bar xp"><i style="--v:64%"></i></div><em>64%</em></div>
+            <ul class="stats">
+              <li><b>STR</b> 16 <small>backend</small></li>
+              <li><b>INT</b> 18 <small>frontend</small></li>
+              <li><b>DEX</b> 15 <small>design</small></li>
+              <li><b>WIS</b> 17 <small>debugging</small></li>
+              <li><b>CHA</b> 14 <small>teamwork</small></li>
+              <li><b>LCK</b> 03 <small>friday deploys</small></li>
+            </ul>
+          </aside>
+
+          <article class="scroll-paper" data-reveal="unroll">
+            <p class="drop">In the age of the great frameworks, when JavaScript ruled the land and CSS was still feared by many, a young wanderer picked up a keyboard and swore an oath: <em>to build things that feel alive.</em></p>
+            <p>Since then I have forged web apps, interfaces and tiny games in the fires of late-night commits. I care about crisp code, honest design, and the little details that make people smile — a hover that bounces, a sound that clicks, a dragon that shouldn't be there.</p>
+            <p>When I'm not slaying bugs, I draw pixel art, explore old games for inspiration, and look for new quests to join.</p>
+            <p class="sign">— signed by my own hand, <b>Draxhtar</b></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section dungeon">
+      <div class="wrap">
+        <h2 class="sec-title"><canvas class="torch" width="10" height="22"></canvas><span class="split">SKILL TREE</span><canvas class="torch" width="10" height="22"></canvas></h2>
+        <p class="sec-lead">Hover a rune to inspect it. Ranks earned through countless battles.</p>
+
+        <div class="skills-grid">
+          <div class="skill px-frame" data-reveal="up" style="--d:0" data-icon="sword" data-lv="9"><canvas class="skill-icon"></canvas><div><h3>JavaScript</h3><p class="rank">MASTER</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:1" data-icon="shield" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>TypeScript</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:2" data-icon="gem" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>React</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:3" data-icon="potion" data-lv="7"><canvas class="skill-icon"></canvas><div><h3>Node.js</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:4" data-icon="book" data-lv="6"><canvas class="skill-icon"></canvas><div><h3>Python</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:5" data-icon="scroll" data-lv="9"><canvas class="skill-icon"></canvas><div><h3>CSS &amp; Motion</h3><p class="rank">MASTER</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:6" data-icon="crown" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>Pixel Art &amp; UI</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:7" data-icon="coin" data-lv="6"><canvas class="skill-icon"></canvas><div><h3>Git &amp; DevOps</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="quests" class="section stone">
+      <div class="wrap">
+        <h2 class="sec-title"><canvas class="torch" width="10" height="22"></canvas><span class="split">QUEST LOG</span><canvas class="torch" width="10" height="22"></canvas></h2>
+        <p class="sec-lead">Completed quests, ordered by rarity of loot.</p>
+
+        <div class="quests-grid">
+          <article class="quest legendary" data-reveal="drop" style="--d:0">
+            <div class="quest-inner">
+              <span class="rarity">LEGENDARY</span>
+              <h3>The Pixel Forge</h3>
+              <p>A browser-based pixel art editor with layers, animation timeline and sprite-sheet export.</p>
+              <ul class="runes"><li>TypeScript</li><li>Canvas</li><li>WebGL</li></ul>
+              <p class="reward">REWARD: 2500 XP</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Deep in the mountain, the forge burns day and night. Here, artists shape tiny squares of light into heroes and monsters. I built the whole editor from scratch: a custom canvas renderer, undo history, onion skinning and a sprite-sheet exporter. It was the hardest quest I ever took — and the loot was worth it.</p>
+            </div>
+          </article>
+
+          <article class="quest epic" data-reveal="drop" style="--d:1">
+            <div class="quest-inner">
+              <span class="rarity">EPIC</span>
+              <h3>Dungeon.js</h3>
+              <p>A tiny roguelike with procedural dungeons, fog of war and a turn-based combat system.</p>
+              <ul class="runes"><li>JavaScript</li><li>Procgen</li><li>Game Dev</li></ul>
+              <p class="reward">REWARD: 1800 XP</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Every floor of this dungeon is different. Rooms are carved by a BSP algorithm, corridors dug with a drunk-walk, and monsters placed by a budget system so no floor is ever too cruel. Many brave adventurers died testing it. Mostly me.</p>
+            </div>
+          </article>
+
+          <article class="quest epic" data-reveal="drop" style="--d:2">
+            <div class="quest-inner">
+              <span class="rarity">EPIC</span>
+              <h3>Chronicle Dashboard</h3>
+              <p>A real-time analytics dashboard with live charts, filters and team workspaces.</p>
+              <ul class="runes"><li>React</li><li>Node.js</li><li>WebSocket</li></ul>
+              <p class="reward">REWARD: 1600 XP</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>The royal scribes needed to see the kingdom's numbers as they happened, not a week later. I built a dashboard that streams events over websockets, aggregates them on the fly and renders thousands of points without breaking a sweat.</p>
+            </div>
+          </article>
+
+          <article class="quest rare" data-reveal="drop" style="--d:3">
+            <div class="quest-inner">
+              <span class="rarity">RARE</span>
+              <h3>Raven Mail</h3>
+              <p>A minimal end-to-end encrypted messaging app. Ravens not included.</p>
+              <ul class="runes"><li>Next.js</li><li>Crypto</li><li>PWA</li></ul>
+              <p class="reward">REWARD: 900 XP</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Secret letters must never be read by the wrong eyes. Messages are encrypted in the browser before they ever leave, and the server only ever sees sealed envelopes. Works offline, too — the raven waits for the wind.</p>
+            </div>
+          </article>
+
+          <article class="quest rare" data-reveal="drop" style="--d:4">
+            <div class="quest-inner">
+              <span class="rarity">RARE</span>
+              <h3>Merchant's Ledger</h3>
+              <p>An e-commerce storefront with a headless CMS, cart and payment integration.</p>
+              <ul class="runes"><li>Vue</li><li>Stripe</li><li>CMS</li></ul>
+              <p class="reward">REWARD: 850 XP</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>A local merchant wanted to sell beyond the town walls. Together we built a fast storefront, an inventory the shopkeeper can edit without calling a wizard, and a checkout that just works.</p>
+            </div>
+          </article>
+
+          <article class="quest common" data-reveal="drop" style="--d:5">
+            <div class="quest-inner">
+              <span class="rarity">COMMON</span>
+              <h3>Spellbook CLI</h3>
+              <p>A command-line tool that stores and runs your favourite shell incantations.</p>
+              <ul class="runes"><li>Python</li><li>CLI</li></ul>
+              <p class="reward">REWARD: 300 XP</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Every wizard forgets their spells. This little tome remembers them for you: save a command once, cast it forever with a short name. Small quest, but I use it every single day.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="raven" class="section dungeon">
+      <div class="wrap">
+        <h2 class="sec-title"><canvas class="torch" width="10" height="22"></canvas><span class="split">SEND A RAVEN</span><canvas class="torch" width="10" height="22"></canvas></h2>
+
+        <div class="raven-grid">
+          <div class="raven-text" data-reveal="up">
+            <p>Got a quest in mind? A job, a collaboration, or just want to talk about pixel art and old games?</p>
+            <p>Write your letter, seal it, and my raven will carry it straight to the tower.</p>
+            <div class="socials">
+              <a class="px-btn small" href="#" target="_blank" rel="noopener">GITHUB</a>
+              <a class="px-btn small" href="#" target="_blank" rel="noopener">LINKEDIN</a>
+              <a class="px-btn small" href="#" target="_blank" rel="noopener">DRIBBBLE</a>
+            </div>
+          </div>
+
+          <form id="letter" class="letter" data-reveal="unroll" novalidate>
+            <label>YOUR NAME<input name="name" type="text" autocomplete="name" required placeholder="Sir Lancelot"></label>
+            <label>YOUR EMAIL<input name="email" type="email" autocomplete="email" required placeholder="lance@camelot.uk"></label>
+            <label>THE MESSAGE<textarea name="message" rows="5" required placeholder="Greetings, traveller..."></textarea></label>
+            <button class="px-btn gold" type="submit">SEAL &amp; SEND ✉</button>
+            <span class="wax" aria-hidden="true">D</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="credits">
+    <p class="thanks">THANKS FOR PLAYING</p>
+    <div class="coin-slot">
+      <button id="coin" type="button" aria-label="Insert coin"><canvas id="coin-icon"></canvas></button>
+      <p>INSERT COIN <span id="coins">0</span></p>
+    </div>
+    <a class="px-btn small" href="#hero">▲ CONTINUE?</a>
+    <p class="copy">© <span id="year"></span> DRAXHTAR · forged by hand, pixel by pixel</p>
+    <p class="secret">psst… ↑ ↑ ↓ ↓ ← → ← → B A</p>
+  </footer>
+
+  <!-- ============ RPG DIALOG ============ -->
+  <div id="dialog" hidden>
+    <div class="dialog-box px-frame" role="dialog" aria-modal="true" aria-labelledby="dialog-name">
+      <canvas class="dialog-portrait"></canvas>
+      <div class="dialog-body">
+        <p class="dialog-name" id="dialog-name"></p>
+        <div class="dialog-text"></div>
+        <div class="dialog-actions"></div>
+      </div>
+      <span class="dialog-next" aria-hidden="true">▼</span>
+    </div>
+  </div>
+
+  <script src="js/sprites.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
