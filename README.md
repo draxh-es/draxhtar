@@ -17,7 +17,7 @@ GitHub Pages'e direkt atılabilir (Settings → Pages → `main` / root).
 - **Giriş kapısı** — "PRESS START", ahşap kapılar açılır, ekran sarsılır, fanfar çalar
 - **Canlı hero sahnesi** — düşük çözünürlükte çizilip büyütülen canvas: dithering'li gün batımı gökyüzü, ay, parallax dağlar, penceresi titreyen ve bayrakları dalgalanan kale, yarasalar, kıvılcımlar, kayan yıldızlar, ateş püskürten ejderha. **Gökyüzüne tıkla → yıldırım.**
 - **Harfler** — başlıktaki harflere dokun, Mario gibi zıplayıp coin fırlatırlar
-- **HUD** — scroll = XP barı, her yeni bölüm = LEVEL UP
+- **HUD** — scroll = XP barı, her yeni bölümde LV artar
 - **13 achievement** — toast bildirimleri, ★ butonundan liste
 - **Skill tree**, **quest log** (nadirlik çerçeveleri, 3D tilt, parlama, lore diyalogları), **parşömen** açılma animasyonu
 - **Send a raven** — mektup mühürlenir, kuzgun gelip alıp götürür, sonra `mailto:` açılır

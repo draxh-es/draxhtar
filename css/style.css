@@ -228,25 +228,6 @@ canvas { image-rendering: crisp-edges; image-rendering: pixelated; }
 }
 #flash.burn { animation: burn .2s steps(2) infinite alternate; }
 
-#levelup {
-  position: fixed;
-  inset: 0;
-  z-index: 92;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  pointer-events: none;
-  opacity: 0;
-  font-family: var(--font-px);
-}
-#levelup span {
-  font-size: clamp(28px, 7vw, 72px);
-  color: var(--gold-2);
-  text-shadow: 0 6px 0 var(--blood-2), 6px 6px 0 var(--ink), 0 0 40px rgba(255, 210, 90, .6);
-}
-#levelup small { display: block; margin-top: 20px; font-size: clamp(9px, 1.6vw, 13px); color: #fff; text-shadow: 3px 3px 0 var(--ink); }
-#levelup.show { animation: lvl 2s steps(20) forwards; }
-
 #toasts {
   position: fixed;
   right: 16px;
@@ -889,12 +870,6 @@ body:not(.locked) #hud { transform: none; }
 }
 @keyframes crt { 50% { opacity: .85; } }
 @keyframes burn { from { opacity: .35; } to { opacity: .9; } }
-@keyframes lvl {
-  0% { opacity: 0; transform: scale(3); }
-  12% { opacity: 1; transform: scale(1); }
-  80% { opacity: 1; transform: none; }
-  100% { opacity: 0; transform: translateY(-60px); }
-}
 @keyframes toastIn { from { transform: translateX(130%); } to { transform: none; } }
 @keyframes toastOut { from { transform: none; } to { transform: translateX(130%); } }
 @keyframes quake {

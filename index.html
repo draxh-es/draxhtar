@@ -34,7 +34,6 @@
   <canvas id="fx" aria-hidden="true"></canvas>
   <div id="crt" aria-hidden="true"></div>
   <div id="flash" aria-hidden="true"></div>
-  <div id="levelup" aria-hidden="true"><span>LEVEL UP!</span><small></small></div>
   <div id="toasts" aria-live="polite"></div>
 
   <!-- ============ HUD ============ -->
@@ -114,14 +113,14 @@
         <p class="sec-lead">Hover a rune to inspect it. Ranks earned through countless battles.</p>
 
         <div class="skills-grid">
-          <div class="skill px-frame" data-reveal="up" style="--d:0" data-icon="sword" data-lv="9"><canvas class="skill-icon"></canvas><div><h3>JavaScript</h3><p class="rank">MASTER</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:1" data-icon="shield" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>TypeScript</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:2" data-icon="gem" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>React</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:3" data-icon="potion" data-lv="7"><canvas class="skill-icon"></canvas><div><h3>Node.js</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:4" data-icon="book" data-lv="6"><canvas class="skill-icon"></canvas><div><h3>Python</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:5" data-icon="scroll" data-lv="9"><canvas class="skill-icon"></canvas><div><h3>CSS &amp; Motion</h3><p class="rank">MASTER</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:6" data-icon="crown" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>Pixel Art &amp; UI</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
-          <div class="skill px-frame" data-reveal="up" style="--d:7" data-icon="coin" data-lv="6"><canvas class="skill-icon"></canvas><div><h3>Git &amp; DevOps</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:0" data-icon="sword" data-lv="9"><canvas class="skill-icon"></canvas><div><h3>C</h3><p class="rank">MASTER</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:1" data-icon="shield" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>Embedded &amp; STM32</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:2" data-icon="gem" data-lv="8"><canvas class="skill-icon"></canvas><div><h3>CAN &amp; CANopen</h3><p class="rank">EXPERT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:3" data-icon="potion" data-lv="7"><canvas class="skill-icon"></canvas><div><h3>C++</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:4" data-icon="book" data-lv="7"><canvas class="skill-icon"></canvas><div><h3>Linux &amp; Sockets</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:5" data-icon="scroll" data-lv="6"><canvas class="skill-icon"></canvas><div><h3>Yocto &amp; AGL</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:6" data-icon="crown" data-lv="6"><canvas class="skill-icon"></canvas><div><h3>DDS &amp; Pub/Sub</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
+          <div class="skill px-frame" data-reveal="up" style="--d:7" data-icon="coin" data-lv="7"><canvas class="skill-icon"></canvas><div><h3>Git &amp; Make</h3><p class="rank">ADEPT</p></div><div class="segs"></div></div>
         </div>
       </div>
     </section>
@@ -136,72 +135,72 @@
           <article class="quest legendary" data-reveal="drop" style="--d:0">
             <div class="quest-inner">
               <span class="rarity">LEGENDARY</span>
-              <h3>The Pixel Forge</h3>
-              <p>A browser-based pixel art editor with layers, animation timeline and sprite-sheet export.</p>
-              <ul class="runes"><li>TypeScript</li><li>Canvas</li><li>WebGL</li></ul>
+              <h3>BCT 22 CANopen Reader</h3>
+              <p>An STM32 HAL module that reads an ATEK BCT 22 pressure sensor straight off the CAN bus over CANopen.</p>
+              <ul class="runes"><li>C</li><li>STM32</li><li>CANopen</li></ul>
               <p class="reward">REWARD: 2500 XP</p>
-              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
-              <p class="lore" hidden>Deep in the mountain, the forge burns day and night. Here, artists shape tiny squares of light into heroes and monsters. I built the whole editor from scratch: a custom canvas renderer, undo history, onion skinning and a sprite-sheet exporter. It was the hardest quest I ever took — and the loot was worth it.</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="https://github.com/draxh-es/canopenpreassuresensor" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>The sensor speaks only CANopen, so I learned its tongue. The module wakes it with an NMT start, turns its PDOs into bar, notices when it falls silent or reboots and brings it back, and keeps every EMCY it sends. SDO and LSS tools for the first bench setup ride along, with a step-by-step guide for the rest of the team.</p>
             </div>
           </article>
 
           <article class="quest epic" data-reveal="drop" style="--d:1">
             <div class="quest-inner">
               <span class="rarity">EPIC</span>
-              <h3>Dungeon.js</h3>
-              <p>A tiny roguelike with procedural dungeons, fog of war and a turn-based combat system.</p>
-              <ul class="runes"><li>JavaScript</li><li>Procgen</li><li>Game Dev</li></ul>
+              <h3>BCT 22 Pressure Node</h3>
+              <p>An STM32F4 node that measures a 4-20 mA pressure transmitter and sends it out as CAN frames.</p>
+              <ul class="runes"><li>C</li><li>STM32F4</li><li>ADC</li><li>CAN</li></ul>
               <p class="reward">REWARD: 1800 XP</p>
-              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
-              <p class="lore" hidden>Every floor of this dungeon is different. Rooms are carved by a BSP algorithm, corridors dug with a drunk-walk, and monsters placed by a budget system so no floor is ever too cruel. Many brave adventurers died testing it. Mostly me.</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="https://github.com/draxh-es/canbct22with4-16" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Half of this quest was copper, not code: the current loop, the shunt resistor, the RC filter and the clamp in front of the ADC, then an SN65HVD230 to reach the bus. The other half turns millivolts into bar and bar into CAN frames, with every design choice, CAN ID and test step written down.</p>
             </div>
           </article>
 
           <article class="quest epic" data-reveal="drop" style="--d:2">
             <div class="quest-inner">
               <span class="rarity">EPIC</span>
-              <h3>Chronicle Dashboard</h3>
-              <p>A real-time analytics dashboard with live charts, filters and team workspaces.</p>
-              <ul class="runes"><li>React</li><li>Node.js</li><li>WebSocket</li></ul>
+              <h3>My DDS Prototype</h3>
+              <p>A tiny DDS-style publish/subscribe system built from scratch on raw UDP sockets, with topics and discovery.</p>
+              <ul class="runes"><li>C++</li><li>UDP</li><li>Sockets</li><li>DDS</li></ul>
               <p class="reward">REWARD: 1600 XP</p>
-              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
-              <p class="lore" hidden>The royal scribes needed to see the kingdom's numbers as they happened, not a week later. I built a dashboard that streams events over websockets, aggregates them on the fly and renders thousands of points without breaking a sweat.</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="https://github.com/draxh-es/MyDdsPrototype" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Before trusting Fast DDS, I wanted to know what it does under the hood. So I built my own: writers and readers that talk on topic IDs, and a herald that announces every participant on a discovery channel so the others can find it. Just POSIX sockets.</p>
             </div>
           </article>
 
           <article class="quest rare" data-reveal="drop" style="--d:3">
             <div class="quest-inner">
               <span class="rarity">RARE</span>
-              <h3>Raven Mail</h3>
-              <p>A minimal end-to-end encrypted messaging app. Ravens not included.</p>
-              <ul class="runes"><li>Next.js</li><li>Crypto</li><li>PWA</li></ul>
+              <h3>Cmaster</h3>
+              <p>A step-by-step path from C fundamentals to systems and embedded engineering, one lesson at a time.</p>
+              <ul class="runes"><li>C</li><li>Make</li><li>ASan</li><li>UBSan</li></ul>
               <p class="reward">REWARD: 900 XP</p>
-              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
-              <p class="lore" hidden>Secret letters must never be read by the wrong eyes. Messages are encrypted in the browser before they ever leave, and the server only ever sees sealed envelopes. Works offline, too — the raven waits for the wind.</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="https://github.com/draxh-es/Cmaster" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>An ongoing training quest. Every lesson is a set of TODO stubs with its own test harness, built with strict warnings plus AddressSanitizer and UBSan, so no memory bug escapes. Pointers, strings, file I/O, bit tricks, data structures, all the way down to bare metal.</p>
             </div>
           </article>
 
           <article class="quest rare" data-reveal="drop" style="--d:4">
             <div class="quest-inner">
               <span class="rarity">RARE</span>
-              <h3>Merchant's Ledger</h3>
-              <p>An e-commerce storefront with a headless CMS, cart and payment integration.</p>
-              <ul class="runes"><li>Vue</li><li>Stripe</li><li>CMS</li></ul>
+              <h3>STM32 Training Grounds</h3>
+              <p>My STM32F429 projects: CubeIDE experiments, linker scripts, startup code and a hand-written HAL library.</p>
+              <ul class="runes"><li>C</li><li>STM32F429</li><li>Bare Metal</li></ul>
               <p class="reward">REWARD: 850 XP</p>
-              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
-              <p class="lore" hidden>A local merchant wanted to sell beyond the town walls. Together we built a fast storefront, an inventory the shopkeeper can edit without calling a wizard, and a checkout that just works.</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="https://github.com/draxh-es/StmTarget" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Where every embedded knight starts: blinking LEDs, then floats and sizeof, then a HAL of my own. Next to it, StmCcodes holds dozens of small drills in bit masks and register-style C. Not glamorous, but every later quest stands on this ground.</p>
             </div>
           </article>
 
           <article class="quest common" data-reveal="drop" style="--d:5">
             <div class="quest-inner">
               <span class="rarity">COMMON</span>
-              <h3>Spellbook CLI</h3>
-              <p>A command-line tool that stores and runs your favourite shell incantations.</p>
-              <ul class="runes"><li>Python</li><li>CLI</li></ul>
+              <h3>Kilo Editor</h3>
+              <p>A fork of antirez's kilo: a terminal text editor in under 1000 lines of C, with no curses.</p>
+              <ul class="runes"><li>C</li><li>VT100</li><li>Terminal</li></ul>
               <p class="reward">REWARD: 300 XP</p>
-              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="#" target="_blank" rel="noopener">SOURCE ↗</a></div>
-              <p class="lore" hidden>Every wizard forgets their spells. This little tome remembers them for you: save a command once, cast it forever with a short name. Small quest, but I use it every single day.</p>
+              <div class="quest-btns"><button class="px-btn small gold lore-btn" type="button">READ LORE</button><a class="px-btn small" href="https://github.com/draxh-es/kilooo" target="_blank" rel="noopener">SOURCE ↗</a></div>
+              <p class="lore" hidden>Not my spell, but one I studied line by line. Raw mode, escape sequences, syntax highlighting and search, all in a single file. The best way to learn how a terminal really works is to read a master's code and then change it.</p>
             </div>
           </article>
         </div>
@@ -218,7 +217,7 @@
             <p>Got a quest in mind? A job, a collaboration, or just want to talk about pixel art and old games?</p>
             <p>Write your letter, seal it, and my raven will carry it straight to the tower.</p>
             <div class="socials">
-              <a class="px-btn small" href="#" target="_blank" rel="noopener">GITHUB</a>
+              <a class="px-btn small" href="https://github.com/draxh-es" target="_blank" rel="noopener">GITHUB</a>
               <a class="px-btn small" href="#" target="_blank" rel="noopener">LINKEDIN</a>
               <a class="px-btn small" href="#" target="_blank" rel="noopener">DRIBBBLE</a>
             </div>

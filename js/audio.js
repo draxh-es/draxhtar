@@ -73,10 +73,6 @@ const Chip = (() => {
       tone(midi(86), 0.63, 0.6, { vol: 0.12 });
       tone(midi(50), 0.63, 0.6, { type: 'triangle', vol: 0.3 });
     }),
-    levelUp: fx(() => {
-      [60, 64, 67, 72, 76, 79, 84].forEach((n, i) => tone(midi(n), i * 0.06, 0.12, { vol: 0.12 }));
-      tone(midi(84), 0.42, 0.5, { vol: 0.1 });
-    }),
     achievement: fx(() => {
       tone(midi(76), 0, 0.1, { vol: 0.12 }); tone(midi(79), 0.1, 0.1, { vol: 0.12 });
       tone(midi(88), 0.2, 0.35, { vol: 0.12 });

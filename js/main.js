@@ -3,8 +3,8 @@
    and a few secrets.
    ========================================================================== */
 const CONFIG = {
-  email: 'you@example.com', // ← where the raven delivers letters
-  roles: ['Full-Stack Developer', 'Pixel Artist', 'Bug Slayer', 'UI Alchemist', 'Dragon Tamer (self-taught)'],
+  email: 'chisaiomer@gmail.com', // ← where the raven delivers letters
+  roles: ['Embedded Software Engineer', 'C Wizard', 'CAN Bus Whisperer', 'Bug Slayer', 'Register Tamer (self-taught)'],
 };
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -346,20 +346,7 @@ const SECTIONS = [
   ['raven', 'tower', 'THE RAVEN TOWER'],
 ];
 let level = 1, started = false;
-const lvEl = $('#lv'), lvBanner = $('#levelup');
-
-function levelUp(label) {
-  lvEl.textContent = level;
-  $('small', lvBanner).textContent = `LV ${level} · ${label}`;
-  lvBanner.classList.remove('show');
-  void lvBanner.offsetWidth;
-  lvBanner.classList.add('show');
-  Chip.sfx.levelUp();
-  for (let i = 0; i < 4; i++) {
-    setTimeout(() => FX.spark(innerWidth * (0.3 + R() * 0.4), innerHeight * (0.35 + R() * 0.3),
-      { n: 26, speed: 140, colors: ['#ffe27a', '#4fd08a', '#fff', '#a066e0'] }), i * 140);
-  }
-}
+const lvEl = $('#lv');
 
 const secIO = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -368,7 +355,7 @@ const secIO = new IntersectionObserver(entries => {
     $$('.hud-nav a').forEach(a => a.toggleAttribute('aria-current', a.hash === '#' + e.target.id));
     if (idx + 1 > level) {
       level = idx + 1;
-      levelUp(SECTIONS[idx][2]);
+      lvEl.textContent = level;
     }
     if (SECTIONS[idx][1]) unlock(SECTIONS[idx][1]);
   });
